@@ -572,7 +572,7 @@ PS_OUTPUT ps_main(VS_OUTPUT input, bool isFrontFace : SV_IsFrontFace)
     return output;
 }
 
-technique Color < int renderType = 0; int channelType = 0; int skinned = 0; int instanced = 0; int dualUV = 0; >
+TECHNIQUE_COLOR_TRANSPARENT
 {
     pass Main
     {
@@ -604,8 +604,8 @@ technique Color < int renderType = 0; int channelType = 0; int skinned = 0; int 
             MultisampleEnable = 0;
             AlphaToCoverage = 0;
         };
-        VertexShader = compile vs_5_0 vs_main();
-        PixelShader = compile ps_5_0 ps_main();
+        VertexShader = compile vs_4_0 vs_main();
+        PixelShader = compile ps_4_0 ps_main();
     }
 }
 

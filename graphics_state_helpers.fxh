@@ -73,3 +73,9 @@ SamplerState SS_PROJECTION_DECALS
     MipLODBias = 0.0;
     MaxAnisotropy = 8;
 };
+
+// =========================================================================
+// 共通テクニック定義
+// =========================================================================
+
+#define TECHNIQUE_COLOR_TRANSPARENT technique Color < int renderType = 0; int channelType = 0; int skinned = 0; int instanced = 0; int dualUV = 0; >
